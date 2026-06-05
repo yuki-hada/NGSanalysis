@@ -4,14 +4,16 @@
   "shell": {
     "init_hook": [
       "if [ ! -d \"$PWD/.devbox/tools/FASTAptamer\" ]; then mkdir -p \"$PWD/.devbox/tools\" && git clone --depth 1 https://github.com/FASTAptamer/FASTAptamer.git \"$PWD/.devbox/tools/FASTAptamer\" && chmod +x \"$PWD/.devbox/tools/FASTAptamer\"/fastaptamer_*; fi",
-      "export PATH=\"$PWD/.devbox/tools/FASTAptamer:$PATH\""
+      "if [ ! -x \"$PWD/.devbox/tools/starcode/starcode\" ]; then mkdir -p \"$PWD/.devbox/tools\" && git clone --depth 1 https://github.com/gui11aume/starcode.git \"$PWD/.devbox/tools/starcode\" && (cd \"$PWD/.devbox/tools/starcode\" && make CC=clang); fi",
+      "export PATH=\"$PWD/.devbox/tools/FASTAptamer:$PWD/.devbox/tools/starcode:$PATH\""
     ],
     "scripts": {
       "fastaptamer_count":   "perl .devbox/tools/FASTAptamer/fastaptamer_count \"$@\"",
       "fastaptamer_cluster": "perl .devbox/tools/FASTAptamer/fastaptamer_cluster \"$@\"",
       "fastaptamer_compare": "perl .devbox/tools/FASTAptamer/fastaptamer_compare \"$@\"",
       "fastaptamer_enrich":  "perl .devbox/tools/FASTAptamer/fastaptamer_enrich \"$@\"",
-      "fastaptamer_search":  "perl .devbox/tools/FASTAptamer/fastaptamer_search \"$@\""
+      "fastaptamer_search":  "perl .devbox/tools/FASTAptamer/fastaptamer_search \"$@\"",
+      "starcode":            ".devbox/tools/starcode/starcode \"$@\""
     }
   }
 }
