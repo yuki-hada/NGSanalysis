@@ -1,0 +1,189 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-06-02T02:01:59Z",
+      "resolved": "github:NixOS/nixpkgs/ffa10e26ae11d676b2db836259889f1f571cb14f?lastModified=1780365719&narHash=sha256-QfWfccTN%2B70ZQ4m2qlU9PiKfz2Yppq94058iJyARNwc%3D"
+    },
+    "perl@latest": {
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#perl",
+      "source": "devbox-search",
+      "version": "5.42.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/js13ri9fvm0ajk1fpd3acigys2a9whdv-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/73vjvvwyw75yy4i1hk4wf2p1gkv87l3d-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/z0ixzhy8jm019qgzjpq8jgxyaplck663-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/js13ri9fvm0ajk1fpd3acigys2a9whdv-perl-5.42.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5wnly69vv1i3y97al4v3xrqymf9hlzgq-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/lhlpv0xz9sdcmj582fc2zqwdpiypx5g2-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/x7gs5rs6qi318js6azf3mn1zn3h32bq5-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/5wnly69vv1i3y97al4v3xrqymf9hlzgq-perl-5.42.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6smkyjwhmqhkfbx174vdaz1rghi8va6i-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/knxqmlxx0qkzrgx28ggymndj8gm2sq4j-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/nzhsmd31p8rgbkabv61fs7d46dg7pcd7-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/6smkyjwhmqhkfbx174vdaz1rghi8va6i-perl-5.42.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6plwsm6pkq79yjv4xvy8csk2pd4hzr67-perl-5.42.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/kzlyzb9wj2p8bvy1y5hxlj0qklhdy35s-perl-5.42.0-man",
+              "default": true
+            },
+            {
+              "name": "devdoc",
+              "path": "/nix/store/378gyaf40gyyqjdq4mp672g40f1spr0k-perl-5.42.0-devdoc"
+            }
+          ],
+          "store_path": "/nix/store/6plwsm6pkq79yjv4xvy8csk2pd4hzr67-perl-5.42.0"
+        }
+      }
+    },
+    "picard-tools@latest": {
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#picard-tools",
+      "source": "devbox-search",
+      "version": "3.4.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/l7851mbq94amg9wdzbkmsbhyhavjq97h-picard-tools-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/l7851mbq94amg9wdzbkmsbhyhavjq97h-picard-tools-3.4.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/62xi6k7zxckask1psdplfycc02a29908-picard-tools-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/62xi6k7zxckask1psdplfycc02a29908-picard-tools-3.4.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7cnwzm1m191lmd0r3kp04nlac00l2rgm-picard-tools-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7cnwzm1m191lmd0r3kp04nlac00l2rgm-picard-tools-3.4.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rmi7dk3cvb2cb4j0326dbdz5233a333n-picard-tools-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rmi7dk3cvb2cb4j0326dbdz5233a333n-picard-tools-3.4.0"
+        }
+      }
+    },
+    "seqkit@latest": {
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#seqkit",
+      "source": "devbox-search",
+      "version": "2.13.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w70zhkq2a2kd9kphk1b17p5n8ap3z338-seqkit-2.13.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/w70zhkq2a2kd9kphk1b17p5n8ap3z338-seqkit-2.13.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bcai4zf5lmkqvnfqh4hsbry6h4bk855q-seqkit-2.13.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bcai4zf5lmkqvnfqh4hsbry6h4bk855q-seqkit-2.13.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bhhwvyb8g18rn2q0jsb38n5aqqnvr0q7-seqkit-2.13.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bhhwvyb8g18rn2q0jsb38n5aqqnvr0q7-seqkit-2.13.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ixij02k73gwlfaks9w6sc3n3v9cspq0z-seqkit-2.13.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ixij02k73gwlfaks9w6sc3n3v9cspq0z-seqkit-2.13.0"
+        }
+      }
+    }
+  }
+}
