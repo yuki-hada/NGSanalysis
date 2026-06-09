@@ -1,10 +1,15 @@
 {
   "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.17.2/.schema/devbox.schema.json",
-  "packages": ["seqkit@latest", "picard-tools@latest", "perl@latest"],
+  "packages": [
+    "seqkit@latest",
+    "picard-tools@latest",
+    "perl@latest",
+    "curl@latest"
+  ],
   "shell": {
     "init_hook": [
-      "if [ ! -d \"$PWD/.devbox/tools/FASTAptamer\" ]; then mkdir -p \"$PWD/.devbox/tools\" && git clone --depth 1 https://github.com/FASTAptamer/FASTAptamer.git \"$PWD/.devbox/tools/FASTAptamer\" && chmod +x \"$PWD/.devbox/tools/FASTAptamer\"/fastaptamer_*; fi",
-      "if [ ! -x \"$PWD/.devbox/tools/starcode/starcode\" ]; then mkdir -p \"$PWD/.devbox/tools\" && git clone --depth 1 https://github.com/gui11aume/starcode.git \"$PWD/.devbox/tools/starcode\" && (cd \"$PWD/.devbox/tools/starcode\" && make CC=clang); fi",
+      "FASTAPTAMER_COMMIT=c49965dc087c0e7a1b629e4e4df99259772d4b22; STARCODE_COMMIT=8987b2eb7558bdb6e8a44823881e4e2f76f47535; CPANM_URL=https://raw.githubusercontent.com/miyagawa/cpanminus/1.7048/cpanm; CPANM_SHA256=4c5dcaac65e0c3e6e4272fd0f5c0a9c9ebdcbb29cdf329b18478b52f6883071c; mkdir -p \"$PWD/.devbox/tools\" && { [ -d \"$PWD/.devbox/tools/FASTAptamer/.git\" ] || git clone https://github.com/FASTAptamer/FASTAptamer.git \"$PWD/.devbox/tools/FASTAptamer\"; } && (cd \"$PWD/.devbox/tools/FASTAptamer\" && git fetch --quiet && git checkout --quiet \"$FASTAPTAMER_COMMIT\" && chmod +x fastaptamer_*) && { [ -d \"$PWD/.devbox/tools/starcode/.git\" ] || git clone https://github.com/gui11aume/starcode.git \"$PWD/.devbox/tools/starcode\"; } && (cd \"$PWD/.devbox/tools/starcode\" && git fetch --quiet && git checkout --quiet \"$STARCODE_COMMIT\" && { [ -x ./starcode ] || make CC=clang; }) && { [ -x \"$PWD/.devbox/tools/cpanm\" ] || (curl -fsSL \"$CPANM_URL\" -o \"$PWD/.devbox/tools/cpanm.tmp\" && echo \"$CPANM_SHA256  $PWD/.devbox/tools/cpanm.tmp\" | shasum -a 256 -c - && chmod +x \"$PWD/.devbox/tools/cpanm.tmp\" && mv \"$PWD/.devbox/tools/cpanm.tmp\" \"$PWD/.devbox/tools/cpanm\"); } && { [ -d \"$PWD/local/lib/perl5\" ] || perl \"$PWD/.devbox/tools/cpanm\" --notest --quiet --local-lib-contained=\"$PWD/local\" --installdeps .; }",
+      "export PERL5LIB=\"$PWD/local/lib/perl5${PERL5LIB:+:$PERL5LIB}\"",
       "export PATH=\"$PWD/.devbox/tools/FASTAptamer:$PWD/.devbox/tools/starcode:$PATH\""
     ],
     "scripts": {
